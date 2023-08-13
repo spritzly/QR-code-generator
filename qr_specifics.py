@@ -6,12 +6,13 @@ qr = qrcode.QRCode(
     version=None, 
     error_correction=qrcode.constants.ERROR_CORRECT_Q, 
     box_size=10, 
-    border=4)
+    border=4
+)
 qr.add_data('data goes here')
 qr.make(fit=True)
 
-img = qr.make_image(fill_color="red", back_color="white")
-img.save("qr_file.png")
+img = qr.make_image(fill_color='red', back_color='white')
+img.save('qr_file.png')
 
 '''
 - version determines the size of the qr code (can set between 1-40), set to None and
